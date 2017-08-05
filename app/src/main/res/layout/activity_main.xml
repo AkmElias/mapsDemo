@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="com.example.elias.hackathon.MainActivity">
+
+        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="160dp">
+        </android.support.v4.view.ViewPager>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pager"
+            android:layout_gravity="center_horizontal|bottom"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/radiogroup">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton"
+                android:checked="true" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton2" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton3" />
+        </RadioGroup>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:paddingTop="5dp"
+            android:id="@+id/ratingandfacts"
+            android:layout_below="@+id/radiogroup"
+            android:layout_height="wrap_content"
+            >
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/rating"
+                android:progressTint="@color/colorAccent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:id="@+id/facts"
+                android:padding="15dp"
+                android:layout_below="@+id/rating"
+                android:background="#aaa"
+                android:text="Hello and Welcome"
+
+                android:textAlignment="center"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingandfacts"
+            android:padding="5dp"
+            android:background="#aaa"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/buttons"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:background="@color/colorAccent"
+                android:onClick="OnClick"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="photos" />
+
+            <Button
+                android:id="@+id/ch"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colorAccent"
+                android:onClick="OnClick"
+                android:padding="5dp"
+                android:text="checkin" />
+
+            <Button
+                android:id="@+id/rev"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorAccent"
+
+                android:onClick="OnClick"
+                android:padding="5dp"
+                android:text="reviews" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NearByPlaces"
+            android:layout_below="@+id/buttons"
+            android:textSize="25dp"
+            android:id="@+id/place"
+            android:textColor="#aab000"
+
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/place"
+
+            >
+
+            <android.support.v7.widget.RecyclerView
+
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/recycler"
+
+
+                >
+            </android.support.v7.widget.RecyclerView>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</ScrollView>
